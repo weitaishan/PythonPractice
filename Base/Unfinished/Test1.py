@@ -19,8 +19,12 @@
 每一位都取1、2、3、4         然后去比较每一个三位数的三位上面是否有重复的，三位数是否有重复的
 '''
 
+result = []
 for i in range(1,5):
-    for x in range(1,5):
-        for y in range(1,5):
+    for j in range(1,5):
+        for k in range(1,5):
+            if (i != j) and (i != k) and (j != k):
+                result.append(i*100 + j*10 + k)
             
-
+print('一共有' + str(len(result)) + '组')
+print(result)
