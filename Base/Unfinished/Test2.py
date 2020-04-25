@@ -37,13 +37,13 @@ print(I)
 '''
 
 
-for i in arr:            #遍历列表arr，但是遍历出来的结果是具体的数字，而非范围，如何将其转变为范围和profits比较呢？
-    for j in rat:
-        if 0<=profits
-
 profits = int(input("请输入公司的当月利润： "))
 arr = [1000000, 600000, 400000, 200000, 100000, 0]
 rat = [0.01, 0.015, 0.03, 0.05, 0.075, 0.1]
+result = 0
 for index in range(0, len(arr)):    # range(0, 6)    0、1、2、3、4、5
-    for
-    if profits >= arr[index]
+    if profits > arr[index]:
+         result += (profits-arr[index]) * rat[index]
+         profits = arr[index]
+
+print(result)
