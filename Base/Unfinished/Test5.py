@@ -5,7 +5,41 @@
 题目：输入三个整数x,y,z，请把这三个数由小到大输出。
 '''
 
+x = int(input("请输入一个整数： "))
+y = int(input("请输入一个整数： "))
+z = int(input("请输入一个整数： "))
+list = []
+if x > y:
+    list.append(y)
+    list.append(x)    # y ,x
+else:
+    list.append(x)
+    list.append(y)    # x ,y
+if x > z:
+    a = list.index(x)
+    list.insert(a, z)
+else:
+    a = list.index(x)
+    list.insert(a+1, z)
+if y > z:
+    list.remove(z)
+    b = list.index(y)
+    list.insert(b, z)
+else:
+    list.remove(z)
+    b = list.index(y)
+    list.insert(b+1, z)
+print(list)
 
+
+
+
+
+
+
+
+
+'''
 x = int(input("请输入一个整数： "))
 y = int(input("请输入一个整数： "))
 z = int(input("请输入一个整数： "))
@@ -14,7 +48,7 @@ if x > y and y > z:
 if x < y and y < z:
     print(x,y,z)
 if x > y and y < x:
-
+'''
 
 
 
