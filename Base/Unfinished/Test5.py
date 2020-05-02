@@ -4,6 +4,33 @@
 '''
 题目：输入三个整数x,y,z，请把这三个数由小到大输出。
 '''
+
+x = int(input("请输入一个整数： "))
+y = int(input("请输入一个整数： "))
+z = int(input("请输入一个整数： "))
+if x > y:
+    a = x
+    x = y
+    y = a
+if x > z:
+    b = x
+    x = z
+    z = b
+if y > z:
+    c = y
+    y = z
+    z = c
+print(x,y,z)
+
+
+
+
+
+
+
+
+
+'''
 x = int(input("请输入一个整数： "))
 y = int(input("请输入一个整数： "))
 z = int(input("请输入一个整数： "))
@@ -14,7 +41,7 @@ if x > z:
 if y > z:
     y,z = z,y
 print(x,y,z)
-
+'''
 
 
 
