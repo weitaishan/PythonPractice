@@ -4,3 +4,11 @@
 
 
 '''
+
+grade = int(input("请输入你的分数： "))
+if grade >= 90:
+    print("A")
+elif 60<= grade <=89:
+    print("B")
+else:
+    print("C")
