@@ -5,3 +5,13 @@
 
 
 '''
+import math
+n = int(input("请输入一个正整数： "))
+a = int(input("请输入一个数字： "))
+result = 0
+sum = 0
+for i in range(0, n):
+    result += a * math.pow(10, i)
+    sum += result
+print(sum)
+
