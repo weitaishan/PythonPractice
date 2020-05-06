@@ -12,11 +12,24 @@ f(1)=4   f(2)=3    f(3)=2   f(4)=1  f(5)=0     即：f(n)=f(n-1)-1   n>1
 
 '''
 
-def index(n):
-    if n <= 1:
-        return 4
-    return index(n-1) - 1
+# def index(n):
+#     if n <= 1:
+#         return 4
+#     return index(n-1) - 1
 
 list = list(input("请输入5个字符： "))
-for i in range(1, len(list)+1):
-    print(list[index(i)])
+# for i in range(1, len(list)+1):
+#     print(list[index(i)])
+
+#二
+for i in range(0, len(list)):
+    print(list[len(list) - i - 1])
+
+#三
+# for i in range(len(list) - 1, -1, -1):
+#     print(list[i])
+
+#四
+# list.reverse()
+# print(list)
+

@@ -19,8 +19,8 @@ def ball(n):
     return ball(n-1)/2
 print(ball(5))
 
-a = int(input("请输入球落地的次数： "))
-sum = 0
-for i in range(1, a+1):
-    sum += 2*ball(i)
-print(sum-ball(1))
+# a = int(input("请输入球落地的次数： "))
+# sum = 0
+# for i in range(1, a+1):
+#     sum += 2*ball(i)
+# print(sum-ball(1))
