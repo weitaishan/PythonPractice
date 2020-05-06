@@ -5,3 +5,26 @@
 
 
 '''
+
+'''
+方法一：
+考虑使用递归方法解题。
+f(1)=10   f(n)=f(n-1)+2 n>1
+'''
+'''
+def age(n):
+    if n <= 1:
+        return 10
+    return age(n-1) + 2
+print(age(5))
+'''
+
+
+'''
+方法二：
+使用循环解题
+'''
+a = 10
+for i in range(1,5):
+    a += 2
+print(a)
