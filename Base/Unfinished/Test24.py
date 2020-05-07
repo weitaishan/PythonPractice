@@ -7,6 +7,7 @@
 
 '''
 
+
 result = 0
 def number1(n):
     if n == 1:
