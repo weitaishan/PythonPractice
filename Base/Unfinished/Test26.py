@@ -21,7 +21,7 @@
 # print(result)
 
 
-#方法一：
+#方法一：      分析：f(1)=1    f(n)=f(n+1)*n    n>1
 '''
 def factorial(n):
     if n <= 1:
