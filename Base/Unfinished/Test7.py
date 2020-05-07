@@ -5,3 +5,10 @@
 
 
 '''
+
+list1 = list(input("请输入你喜欢的任意数据： "))
+list2 = []
+for index in range(0,(len(list1)+1)):
+    a = list1[index]
+    list2.append(a)
+print(list2)

@@ -8,6 +8,25 @@
 x = int(input("请输入一个整数： "))
 y = int(input("请输入一个整数： "))
 z = int(input("请输入一个整数： "))
+if x > y:
+    x,y = y,x
+if x > z:
+    x,z = z,x
+if y > z:
+    y,z = z,y
+print(x,y,z)
+
+
+
+
+
+
+
+
+'''
+x = int(input("请输入一个整数： "))
+y = int(input("请输入一个整数： "))
+z = int(input("请输入一个整数： "))
 list = []
 if x > y:
     list.append(y)
@@ -30,12 +49,7 @@ else:
     b = list.index(y)
     list.insert(b+1, z)
 print(list)
-
-
-
-
-
-
+'''
 
 
 
@@ -49,10 +63,6 @@ if x < y and y < z:
     print(x,y,z)
 if x > y and y < x:
 '''
-
-
-
-
 
 
 '''
@@ -71,6 +81,8 @@ else:
         else:
             print(z,x,y)
 '''
+
+
 
 
 '''
