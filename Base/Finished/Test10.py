@@ -5,3 +5,7 @@
 
 
 '''
+
+import time
+time.sleep(1)
+print("当前时间是：%s" % time.ctime())
