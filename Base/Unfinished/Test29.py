@@ -22,5 +22,5 @@ else:
 # 逆序打印出各位数字
 list = list(input("请输入一个不超过5位数的正整数： "))
 for i in range(1, len(list)+1):
-    print(list[len(list) -i ], end=" ")
+    print(list[len(list) - i], end=" ")
 
