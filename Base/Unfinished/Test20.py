@@ -28,7 +28,7 @@ print(ball(5))
 # print(sum-ball(1))
 
 
-# 使用循环解题（求高度）
+# 使用循环解题
 number = int(input("请输入小球的落地次数： "))
 a = 100
 b = 0
