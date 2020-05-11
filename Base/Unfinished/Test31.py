@@ -17,6 +17,7 @@
 星期日：Sunday
 '''
 
+
 list = input("请用英文输入星期一到星期日任意一天： ")
 if list[0] == "M":
     print("星期一")
