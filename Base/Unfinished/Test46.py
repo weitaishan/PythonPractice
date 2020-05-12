@@ -5,3 +5,11 @@
 
 
 '''
+
+
+
+result = 0
+while result < 50:
+    number = int(input("请输入一个数字： "))
+    result = number * number
+    print(result)
