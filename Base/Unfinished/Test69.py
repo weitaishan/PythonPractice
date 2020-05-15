@@ -6,3 +6,18 @@
 
 
 '''
+
+
+def leave(n):
+    list = []
+    x = n % 3
+    for i in range(1, n+1):
+        list.append(i)
+    while n > 2:
+        for j in range(0, n):
+            if (j+1) % 3 == 0:
+                list.pop(j)
+        n = len(list)
+    print(list)
+
+leave(5)
