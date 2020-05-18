@@ -5,3 +5,11 @@
 
 封装成一个函数方便调用 exchange(x,y)
 '''
+
+def exchange(x, y):
+    a = x
+    x = y
+    y = a
+    print(x, y)
+
+exchange(123, '你好')
