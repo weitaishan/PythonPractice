@@ -7,3 +7,30 @@
 
 
 '''
+
+
+# sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
+# number = int(input("请输入一个数： "))
+# if number > sortList[-1]:
+#     sortList.append(number)
+# else:
+#     for i in range(0, len(sortList)-1):
+#         if number < sortList[i]:
+#             sortList.insert(i, number)
+#             break
+# print(sortList)
+
+
+sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
+number = int(input("请输入一个数： "))
+if number > sortList[-1]:
+    sortList.append(number)
+else:
+    for i in range(0, len(sortList)-1):
+        if number < sortList[i]:
+            t = sortList[i]
+            sortList[i] = number
+            break
+        
+
+print(sortList)
