@@ -8,7 +8,7 @@
 
 '''
 
-
+# 方法一
 # sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
 # number = int(input("请输入一个数： "))
 # if number > sortList[-1]:
@@ -20,17 +20,57 @@
 #             break
 # print(sortList)
 
-
+# 方法二
 sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
+emptyList = []
 number = int(input("请输入一个数： "))
 if number > sortList[-1]:
     sortList.append(number)
 else:
-    for i in range(0, len(sortList)-1):
+    for i in range(0, len(sortList)):
         if number < sortList[i]:
-            t = sortList[i]
-            sortList[i] = number
+            emptyList.append(number)
             break
-        
+        else:
+            emptyList.append(sortList[i])
+    for j in range(i, len(sortList)):
+        emptyList.append(sortList[j])
+print(emptyList)
 
-print(sortList)
+
+# 方法二的改进
+sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
+emptyList = []
+number = int(input("请输入一个数： "))
+if number > sortList[-1]:
+    sortList.append(number)
+else:
+    isAppend = 0
+    for i in range(0, len(sortList)):
+        if number < sortList[i]:
+            if isAppend == 0:
+                emptyList.append(number)
+                emptyList.append(sortList[i])
+                isAppend = 1
+            else:
+                emptyList.append(sortList[i])
+        else:
+            emptyList.append(sortList[i])
+print(emptyList)
+
+
+
+# 方法三
+# sortList = [0, 6, 7, 13, 14, 70, 78, 81, 89]
+# number = int(input("请输入一个数： "))
+# sortList.append(number)
+# a = 0
+# for i in range(a, len(sortList)-1):        # [0, 6, 7, 13, 14, 15, 78, 81, 89, 70]
+#     if sortList[-1] < sortList[i]:
+#         t = sortList[i]
+#         sortList[i] = sortList[-1]
+#         sortList[-1] = t
+#         a = i + 1
+# print(sortList)
+
+
