@@ -17,6 +17,9 @@
 
 推荐学习网址：http://c.biancheng.net/view/4552.html
 
+1、静态变量和静态方法都属于类的静态成员，它们与普通的成员变量和成员方法不同，静态变量和静态方法只属于定义它们的类，而不属于某一个对象。
+2、静态变量和静态方法都可以通过类名和对象进行访问。
+
 '''
 
 
@@ -27,3 +30,15 @@ class pyLanguage:
 pyLanguage.info("Python教程", "http://c.biancheng.net/python")       # 使用类名直接调用调用静态方法
 python = pyLanguage()
 python.info("Python教程","http://c.biancheng.net/python")            # 使用类对象调用静态方法
+
+
+
+class Static(object):
+    StaticVar = 5
+    def VarFunc(self):
+        self.StaticVar += 1
+        print(self.StaticVar)
+print(Static.StaticVar)
+a = Static()
+for i in range(3):
+    a.VarFunc()
