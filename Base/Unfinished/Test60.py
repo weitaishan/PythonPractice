@@ -5,3 +5,15 @@
 
 
 '''
+
+# 方法一
+Astr = input("请随意输入一串字符： ")
+print(len(Astr))
+
+# 方法二
+Alist = list(input("请随意输入一串字符："))
+a = 0
+for i in Alist:
+    a += 1
+print(a)
+

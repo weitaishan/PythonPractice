@@ -29,10 +29,56 @@ list = [13, 6, 78, 14, 89, 7, 0, 81, 16, 70]
 
 # 冒泡法
 
+# 方法一
+# b = len(list) - 1
+# while b > 1:
+#     for i in range(0, b):
+#         if list[i] > list[i+1]:
+#             a = list[i]
+#             list[i] = list[i+1]
+#             list[i+1] = a
+#             print(list)
+#     b -= 1
+#
+# # 方法二
+# for i in range(0, len(list)-1):
+#     for j in range(0, len(list)-1-i):
+#         if list[j] > list[j + 1]:
+#             a = list[j]
+#             list[j] = list[j + 1]
+#             list[j + 1] = a
+
+
+
+# 选择法
+
+# for i in range(0, len(list)-1):
+#     if list[i] - list[i+1] >= 0:
+#         a = i + 1
+# print(a)
 for i in range(0, len(list)-1):
-    if list[i] - list[i+1] >= 0:
-        a = list[i]
-        list[i] = list[i+1]
-        list[i+1] = a
-        print(list)
-#print(list)
+    minIndex = i
+    for j in range(i+1, len(list)):
+        if list[minIndex] > list[j]:
+            minIndex = j
+    t = list[minIndex]
+    list[minIndex] = list[i]
+    list[i] = t
+print(list)
+
+
+
+
+
+
+
+
+# b = len(list) - 2
+# for j in range(0, b):
+#     if list[j] - list[j+1] >= 0:
+#         c = list[j]
+#         list[j] = list[j+1]
+#         list[j+1] = c
+#         print(list)
+# b -= 1
+
