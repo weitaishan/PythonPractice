@@ -9,13 +9,19 @@
 
 from tkinter import *
 root = Tk()
-cv = Canvas(root, bg = "yellow")
+cv = Canvas(root, width = 500, height = 500, bg = "yellow")
 left = 10
 top = 10
 right = 20
-buttom = 20
+num = 15
+# cv.create_oval(230, 240, 270, 260)
+# cv.create_oval(210, 230, 290, 270)
 for i in range(0, 10):
-    cv.create_rectangle(left + 2*i, top + 2*i, right + 2*i, buttom + 2*i, fill = 'green', width = 5)
-    cv.create_oval(left + 4*i, top + 4*i, right + 4*i, buttom + 4*i, fill = 'blue')
+    cv.create_oval(250 - right, 250 - left, 250 + right, 250 + left)
+    cv.create_oval(250 - 20, 250 - top, 250 + 20, 250 + top)
+    cv.create_rectangle(20 - 2*i, 20 - 2*i, 10*(i+2), 10*(i+2))
+    right += 5
+    left += 5
+    top += 10
 cv.pack()
 root.mainloop()
