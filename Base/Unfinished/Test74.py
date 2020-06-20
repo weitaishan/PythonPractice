@@ -20,3 +20,9 @@ print(listSort)
 # 降序排列
 listSort.sort(reverse=True)
 print(listSort)
+# 通过指定列表中的元素排序
+def takeSecond(elem):
+    return elem[1]
+random = [(2, 2), (3, 4), (4, 1), (1, 3)]
+random.sort(key=takeSecond)
+print(random)
