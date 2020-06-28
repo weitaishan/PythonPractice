@@ -6,3 +6,10 @@
 
 
 '''
+
+# 当前时间戳
+import time
+print(time.time())
+
+# 当前本地时间
+print(time.localtime())
