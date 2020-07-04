@@ -14,3 +14,7 @@ print(str1.count('aha'))     # 2
 
 # 自己写的方法
 def counter(str2, elements):
+    sum = 0
+    a = str2.find(elements)
+    if a + len(elements) != -1:
+        sum += 1
