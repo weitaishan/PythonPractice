@@ -7,3 +7,10 @@
 2.不用系统方法，自己写一个方法出来
 '''
 
+str1 = 'sdghasdhsihahakljdfaha'
+
+# 系统方法
+print(str1.count('aha'))     # 2
+
+# 自己写的方法
+def counter(str2, elements):
