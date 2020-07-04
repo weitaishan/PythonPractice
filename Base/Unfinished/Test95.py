@@ -8,4 +8,5 @@ nn
 '''
 
 import time
-stime = time.asctime()
+stime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+print(time.strptime(stime, "%Y-%m-%d %H:%M:%S"))

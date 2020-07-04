@@ -51,15 +51,15 @@ print(int(time.time()))    #对时间戳取整     1593320007
 
 # 2、将一个时间戳转换为当前时区的struct_time：time.localtime（[sec]），即时间数组格式的时间。可选参数sec为转换为time.struct_time类型的对象的秒数。如果secs参数未提供，则以当前时间为准
 # 不给定sec参数
-print(time.localtime())
+print(time.localtime())              #  time.struct_time(tm_year=2020, tm_mon=7, tm_mday=4, tm_hour=15, tm_min=14, tm_sec=4, tm_wday=5, tm_yday=186, tm_isdst=0)
 # 给定sec参数
-print(time.localtime(1593330202))
+print(time.localtime(1593330202))    #  time.struct_time(tm_year=2020, tm_mon=6, tm_mday=28, tm_hour=15, tm_min=43, tm_sec=22, tm_wday=6, tm_yday=180, tm_isdst=0)
 
 # 3、将一个时间戳转换为UTC时区(0时区)的struct_time: time.gmtime([sec]),可选参数sec为转换为time.struct_time类型的对象的秒数。如果secs参数未提供，则以当前时间为准
 # 不给定sec参数
-print(time.gmtime())
+print(time.gmtime())    #  time.struct_time(tm_year=2020, tm_mon=7, tm_mday=4, tm_hour=7, tm_min=14, tm_sec=4, tm_wday=5, tm_yday=186, tm_isdst=0)
 # 给定sec参数
-print(time.gmtime(1593330759))
+print(time.gmtime(1593330759))    #  time.struct_time(tm_year=2020, tm_mon=6, tm_mday=28, tm_hour=7, tm_min=52, tm_sec=39, tm_wday=6, tm_yday=180, tm_isdst=0)
 
 # 4、time.mktime(t):将一个struct_time转化为时间戳。time.mktime() 函数执行与gmtime(), localtime()相反的操作，它接收struct_time对象作为参数,返回用秒数表示时间的浮点数。
 # 如果输入的值不是一个合法的时间，将触发 OverflowError 或 ValueError。其中参数t为结构化的时间或者完整的9位元组元素
@@ -77,15 +77,15 @@ time.sleep(10)
 # 7、time.asctime([t]):把一个表示时间的元组或者struct_time表示为 ‘Sun Aug 23 14:31:59 2015’ 这种形式。如果没有给参数，会将time.localtime()作为参数传入。
 # 参数t为：9个元素的元组或者通过函数 gmtime() 或 localtime() 返回的时间值
 # 不给定参数
-print(time.asctime())
+print(time.asctime())    #  Sat Jul  4 15:14:14 2020
 # 给定参数
-print(time.asctime(time.gmtime()))
+print(time.asctime(time.gmtime()))    #  Sat Jul  4 15:14:14 2020
 
 # 8、time.ctime([sec])：把一个时间戳转换为time.asctime()的形式，参数sec为要转换为字符串时间的秒数。如果未指定参数，将会默认使用time.time()作为参数。它的作用相当于time.asctime(time.localtime(secs))
 # 未指定参数
-print(time.ctime())
+print(time.ctime())       #  Sat Jul  4 15:14:14 2020
 # 指定参数
-print(time.ctime(1593332349))
+print(time.ctime(1593332349))     #  Sun Jun 28 16:19:09 2020
 
 # 9、time.strftime(format[,t]):返回字符串表示的当地时间。把一个代表时间的元组或者struct_time（如由time.localtime()和time.gmtime()返回）转化为格式化的时间字符串，
 # 格式由参数format决定。如果未指定，将传入time.localtime()。如果元组中任何一个元素越界，就会抛出ValueError的异常。函数返回的是一个可读表示的本地时间的字符串。
@@ -118,9 +118,9 @@ print(time.ctime(1593332349))
 %%  ‘%’字符 
 '''
 # 未指定参数t
-print(time.strftime("%Y-%m-%d %H:%M:%S"))
+print(time.strftime("%Y-%m-%d %H:%M:%S"))    #  2020-07-04 15:14:14
 # 指定了参数t
-print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))    #  2020-07-04 15:14:14
 
 # 10、time.strptime(string[,format]):把格式化字符串转化成struct_time.该函数是time.strftime()函数的逆操作。time strptime() 函数根据指定的格式把一个时间字符串解析为时间元组。所以函数返回的是struct_time对象。
 # 参数： string ：时间字符串         format：格式化字符串
