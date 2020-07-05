@@ -11,13 +11,13 @@
 '''
 
 
-# 方法一：
+# 方法一：使用join方法来实现
 list1 = ['abc', 123, '你好', 999, 111]
 sep = ','
 str1 = sep.join(str(i) for i in list1)
 print(str1)    #  abc,123,你好,999,111
 
-# 方法二
+# 方法二  使用连接字符来实现
 def seprate(listData):
     listData = list(listData)
     str2 = str(listData[0])    # 因为第一个元素前面不需要加逗号，所以需要单独拿出来（最后一个元素后面也不需要加逗号）
