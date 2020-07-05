@@ -6,3 +6,10 @@
 
 
 '''
+import random
+def number(n):      # n为读取n个数
+    for i in range(1, n+1):
+        a = random.randint(1, 50)
+        print(a)
+        print('*' * a)
+number(3)
