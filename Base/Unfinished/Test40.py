@@ -7,4 +7,18 @@
 '''
 
 
-list1 = [8, 0, 13, 28, 9, 75, 21]
+
+# 方法一：reserve方法
+list2 = [2, 5, 22, 13, 99, 87]
+list2.reverse()
+print(list2)     #  [87, 99, 13, 22, 5, 2]
+
+
+# 方法二，定义一个函数
+def location(listData):
+    list3 = []
+    for i in range(0, len(listData)):
+        list3.append(listData[len(listData)-1-i])
+    print(list3)
+location([2, 5, 22, 13, 99, 87])     #  [87, 99, 13, 22, 5, 2]
+
