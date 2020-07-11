@@ -8,3 +8,13 @@
 
 
 '''
+
+A = int(input("请随意输入一个奇数： "))
+a = '9'
+for i in range(1, 1000):
+    if int(a*i) % A == 0:
+        print(i)
+        break
+
+
+
