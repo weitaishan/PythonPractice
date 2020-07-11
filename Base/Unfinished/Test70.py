@@ -5,5 +5,3 @@
 
 
 '''
-Astr = input('请输入一串字符串：')
-def long(Astr):
