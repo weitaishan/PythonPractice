@@ -5,3 +5,7 @@
 
 
 '''
+
+if __name__ == '__main__':
+    str1 = input("请随意输入一串字符： ")
+    print(len(str1))
