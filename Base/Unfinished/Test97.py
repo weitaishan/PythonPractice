@@ -6,3 +6,16 @@
 
 
 '''
+
+def str1():
+    b = input('请输入文件名 ')
+    a = input('请随意输入一些字符： ')
+    list1 = list(a)
+    file = open(b, 'w')
+    for i in list1:
+        if i != '#':
+            file.write(i)
+        else:
+            file.close()
+            break
+str1()
