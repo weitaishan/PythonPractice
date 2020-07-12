@@ -6,3 +6,9 @@
 
 
 '''
+
+A = input('请随意输入一个字符串： ')
+B = str.upper(A)
+file = open('test.txt', 'w')
+file.write(B)
+file.close()
