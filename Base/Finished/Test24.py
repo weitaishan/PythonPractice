@@ -21,6 +21,6 @@ def number2(n):
     if n == 2:
         return 2
     return number2(n-1) + number2(n-2)
-for i in range(1,4):
+for i in range(1,21):
     result += number1(i)/number2(i)
 print(result)
